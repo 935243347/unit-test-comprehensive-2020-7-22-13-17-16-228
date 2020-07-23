@@ -44,3 +44,39 @@ When inputting, separate the numbers with spaces.
 ## Practice Output && Submit
 - You should implement the test code and push your repo to github repo named **unit-test-comprehensive**.
 - Commit your repository link to complete this Question.
+
+
+1. xAxB
+2. 输入合法性校验
+3. 游戏流程
+4. 生成答案
+
+
+
+密码：{1,2,3,4}
+
+4A0B
+input:{1,2,3,4}
+
+0A4B
+input:{4,3,2,1}
+
+0A0B
+input:{5,6,7,8}
+
+0A2B
+input:{3,4,5,6}
+
+2A2B
+input:{4,2,3,1}
+
+2A1B
+input:{1,2,4,5}
+
+
+1 5 6 7    
+1 1 2 3    Wrong Input，Input again
+1 2        Wrong Input，Input again
+
+
+
