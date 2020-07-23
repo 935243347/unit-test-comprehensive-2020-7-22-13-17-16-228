@@ -1,7 +1,5 @@
-package example;
+package game;
 
-import game.AnswerGenerator;
-import game.GuessNumber;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
