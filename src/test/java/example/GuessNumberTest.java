@@ -10,15 +10,26 @@ public class GuessNumberTest {
     void should_return_4A0B_when_guess_given_answer_1234_and_input_guess_1234(){
         //Given
         GuessNumber guessNumber = new GuessNumber();
-
         int[] answer = {1,2,3,4};
         int[] guessNum = {1,2,3,4};
+
         //When
         String result = guessNumber.guess(answer, guessNum);
 
         //Then
         assertEquals("4A0B", result);
+    }
+    @Test
+    void should_return_0A4B_when_guess_given_answer_1234_and_input_guess_4321(){
+        //Given
+        GuessNumber guessNumber = new GuessNumber();
+        int[] answer = {1,2,3,4};
+        int[] guessNum = {4,3,2,1};
 
+        //When
+        String result = guessNumber.guess(answer, guessNum);
 
+        //Then
+        assertEquals("0A4B", result);
     }
 }
