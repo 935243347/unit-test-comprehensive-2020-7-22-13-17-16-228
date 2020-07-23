@@ -11,10 +11,10 @@ public class GuessNumberTest {
         //Given
         GuessNumber guessNumber = new GuessNumber();
         int[] answer = {1,2,3,4};
-        int[] guessNum = {1,2,3,4};
+        int[] inputGuess = {1,2,3,4};
 
         //When
-        String result = guessNumber.guess(answer, guessNum);
+        String result = guessNumber.guess(answer, inputGuess);
 
         //Then
         assertEquals("4A0B", result);
@@ -24,10 +24,10 @@ public class GuessNumberTest {
         //Given
         GuessNumber guessNumber = new GuessNumber();
         int[] answer = {1,2,3,4};
-        int[] guessNum = {4,3,2,1};
+        int[] inputGuess = {4,3,2,1};
 
         //When
-        String result = guessNumber.guess(answer, guessNum);
+        String result = guessNumber.guess(answer, inputGuess);
 
         //Then
         assertEquals("0A4B", result);
