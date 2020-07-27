@@ -1,9 +1,6 @@
 package game;
 
-
-
 import java.util.HashSet;
-import java.util.regex.Pattern;
 
 public class InputValidator {
     public boolean validNumber(String inputNumber) {
@@ -32,12 +29,5 @@ public class InputValidator {
         }
         System.out.println("Wrong Input，Input again");
         return false;
-    }
-    public static boolean isInteger(String str) {
-
-        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
-
-        return pattern.matcher(str).matches();
-
     }
 }
