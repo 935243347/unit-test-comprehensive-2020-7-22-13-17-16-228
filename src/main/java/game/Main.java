@@ -10,7 +10,7 @@ public class Main {
         for(int i = 0; i < 6; i++) {
             Scanner sc = new Scanner(System.in);
             String inputNumberString = sc.nextLine();
-            boolean valid = inputValidator.valid(inputNumberString);
+            boolean valid = inputValidator.validNumber(inputNumberString);
             if (valid) {
                 String number = inputNumberString.replaceAll(" ", "");
                 char[] inputNumberCharArray = number.toCharArray();
