@@ -4,10 +4,9 @@ import java.util.HashSet;
 
 public class InputValidator {
     //todo rename
-    public boolean valid(String inputNumber) {
+    public boolean validNumber(String inputNumber) {
         String number = inputNumber.replaceAll(" ", "");
         char[] inputNumberCharArray = number.toCharArray();
-
         if(inputNumberCharArray.length == 4) {
             int[] intArry = new int[4];
             for (int index = 0; index < inputNumberCharArray.length; index++) {

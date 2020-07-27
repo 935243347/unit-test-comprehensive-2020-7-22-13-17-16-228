@@ -11,7 +11,7 @@ public class AnswerGeneratorImpl implements AnswerGenerator {
             numberList.add(num);
         }
         Collections.shuffle(numberList);
-        for(int index = 0; index < 4; index++){
+        for (int index = 0; index < 4; index++) {
             answer[index] = numberList.get(index);
         }
         return answer;

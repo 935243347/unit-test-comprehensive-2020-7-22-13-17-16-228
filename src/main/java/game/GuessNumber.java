@@ -8,10 +8,10 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputGuess) {
-        int countANum= 0;
+        int countANum = 0;
         int countBNum = 0;
-        for(int i = 0; i < answer.length; i++){
-            if(answer[i] == inputGuess[i]){
+        for (int i = 0; i < answer.length; i++) {
+            if (answer[i] == inputGuess[i]) {
                 countANum++;
                 continue;
             }
@@ -22,6 +22,6 @@ public class GuessNumber {
                 }
             }
         }
-        return String.format("%sA%sB",countANum, countBNum);
+        return String.format("%sA%sB", countANum, countBNum);
     }
 }
