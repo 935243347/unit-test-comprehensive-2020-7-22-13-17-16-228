@@ -3,17 +3,19 @@ package game;
 import java.util.HashSet;
 
 public class InputValidator {
+    //todo rename
     public boolean valid(String inputNumber) {
         String number = inputNumber.replaceAll(" ", "");
         char[] inputNumberCharArray = number.toCharArray();
+
         if(inputNumberCharArray.length == 4) {
             int[] intArry = new int[4];
-            for (int i = 0; i < inputNumberCharArray.length; i++) {
-                intArry[i] = inputNumberCharArray[i] - '0';
+            for (int index = 0; index < inputNumberCharArray.length; index++) {
+                intArry[index] = inputNumberCharArray[index] - '0';
             }
-            HashSet<Integer> integerSet = new HashSet<Integer>();
-            for(int j: intArry){
-                integerSet.add(j);
+            HashSet<Integer> integerSet = new HashSet<>();
+            for(int num: intArry){
+                integerSet.add(num);
             }
             if(integerSet.size() == 4){
                 return true;
