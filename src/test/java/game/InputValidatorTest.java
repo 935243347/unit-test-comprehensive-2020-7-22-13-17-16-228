@@ -37,9 +37,15 @@ public class InputValidatorTest {
         assertFalse(valid);
     }
     @Test
-    void should_return_false_when_valid_given_input_number__56710() {
+    void should_return_false_when_valid_given_input_number_56710() {
         InputValidator inputValidator = new InputValidator();
         boolean valid = inputValidator.validNumber("5 6 7 10");
+        assertFalse(valid);
+    }
+    @Test
+    void should_return_false_when_valid_given_input_number_567null() {
+        InputValidator inputValidator = new InputValidator();
+        boolean valid = inputValidator.validNumber("5 6 7 null");
         assertFalse(valid);
     }
 }
