@@ -48,4 +48,10 @@ public class InputValidatorTest {
         boolean valid = inputValidator.validNumber("5 6 7 null");
         assertFalse(valid);
     }
+    @Test
+    void should_return_false_when_valid_given_input_number_negative_157() {
+        InputValidator inputValidator = new InputValidator();
+        boolean valid = inputValidator.validNumber("-1 5 7");
+        assertFalse(valid);
+    }
 }
