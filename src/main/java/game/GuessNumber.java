@@ -10,13 +10,13 @@ public class GuessNumber {
     public String guess(int[] inputGuess) {
         int countANum = 0;
         int countBNum = 0;
-        for (int i = 0; i < answer.length; i++) {
-            if (answer[i] == inputGuess[i]) {
+        for (int index = 0; index < answer.length; index++) {
+            if (answer[index] == inputGuess[index]) {
                 countANum++;
                 continue;
             }
             for (int guessNum : inputGuess) {
-                if (answer[i] == guessNum) {
+                if (answer[index] == guessNum) {
                     countBNum++;
                     break;
                 }
