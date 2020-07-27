@@ -1,7 +1,7 @@
 package game;
 
 public class GuessNumber {
-    private int[] answer;
+    private final int[] answer;
 
     public GuessNumber(AnswerGenerator answerGenerator) {
         this.answer = answerGenerator.generate();
