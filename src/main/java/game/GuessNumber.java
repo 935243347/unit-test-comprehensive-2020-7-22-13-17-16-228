@@ -15,8 +15,8 @@ public class GuessNumber {
                 countANum++;
                 continue;
             }
-            for(int j = 0; j < inputGuess.length; j++){
-                if(answer[i] == inputGuess[j]){
+            for (int guessNum : inputGuess) {
+                if (answer[i] == guessNum) {
                     countBNum++;
                     break;
                 }
