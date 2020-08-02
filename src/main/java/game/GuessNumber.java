@@ -7,7 +7,9 @@ public class GuessNumber {
         this.answer = answerGenerator.generate();
     }
 
+    //todo function rename
     public String guess(int[] inputGuess) {
+        //todo rename countANum to xxxxx
         int countANum = 0;
         int countBNum = 0;
         for (int index = 0; index < answer.length; index++) {
@@ -22,6 +24,7 @@ public class GuessNumber {
                 }
             }
         }
+        //todo function
         return String.format("%sA%sB", countANum, countBNum);
     }
 }

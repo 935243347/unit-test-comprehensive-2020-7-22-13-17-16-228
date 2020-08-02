@@ -22,6 +22,7 @@ public class InputValidator {
                 return false;
             }
         }
+        //todo function
         HashSet<Integer> integerSet = new HashSet<>();
         for(int num: intArry){
             integerSet.add(num);
@@ -29,6 +30,7 @@ public class InputValidator {
         if(integerSet.size() == validLength){
             return true;
         }
+        //todo exception
         System.out.println("Wrong Input，Input again");
         return false;
     }
