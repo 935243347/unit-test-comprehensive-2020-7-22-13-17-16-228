@@ -2,22 +2,22 @@ package game;
 
 import exception.InputNumberInvalidSymbolException;
 import exception.InputNumberLengthInvalException;
-import exception.InvalidInputNumberException;
+import exception.InvalidRepeatInputNumberException;
 
 import java.util.HashSet;
 
 public class InputValidator {
     private final static int validLength = 4;
 
-    public boolean validNumber(String inputNumber) throws InputNumberLengthInvalException, InputNumberInvalidSymbolException, InvalidInputNumberException {
+    public void validNumber(String inputNumber) throws InputNumberLengthInvalException, InputNumberInvalidSymbolException, InvalidRepeatInputNumberException {
         String number = inputNumber.replaceAll(" ", "");
         char[] inputNumberCharArray = number.toCharArray();
         validInputNumberLength(inputNumberCharArray);
         int[] intArry = converInputNumberToArray(inputNumberCharArray);
-        return isNotIncludeRepeatNumbers(intArry);
+        isNotIncludeRepeatNumbers(intArry);
     }
 
-    private boolean isNotIncludeRepeatNumbers(int[] intArry) throws InvalidInputNumberException {
+    private boolean isNotIncludeRepeatNumbers(int[] intArry) throws InvalidRepeatInputNumberException {
         HashSet<Integer> integerSet = new HashSet<>();
         for (int num : intArry) {
             integerSet.add(num);
@@ -25,7 +25,7 @@ public class InputValidator {
         if (integerSet.size() == validLength) {
             return true;
         }
-        throw new InvalidInputNumberException();
+        throw new InvalidRepeatInputNumberException();
     }
 
     private void validInputNumberLength(char[] inputNumberCharArray) throws InputNumberLengthInvalException {
