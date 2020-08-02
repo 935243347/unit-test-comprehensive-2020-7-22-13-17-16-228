@@ -7,8 +7,7 @@ public class GuessNumber {
         this.answer = answerGenerator.generate();
     }
 
-    //todo function rename
-    public String guess(int[] inputGuess) {
+    public String countGuessNumber(int[] inputGuess) {
         int correctPositionAndNumberCount = 0;
         int correctNumberWrongPosition = 0;
         for (int index = 0; index < answer.length; index++) {
@@ -23,7 +22,10 @@ public class GuessNumber {
                 }
             }
         }
-        //todo function
+        return formatResultNumber(correctPositionAndNumberCount, correctNumberWrongPosition);
+    }
+
+    private String formatResultNumber(int correctPositionAndNumberCount, int correctNumberWrongPosition) {
         return String.format("%sA%sB", correctPositionAndNumberCount, correctNumberWrongPosition);
     }
 }

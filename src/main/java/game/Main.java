@@ -21,7 +21,7 @@ public class Main {
             for (int j = 0; j < inputNumberCharArray.length; j++) {
                 inputNumber[j] = inputNumberCharArray[j] - '0';
             }
-            System.out.println(guessNumber.guess(inputNumber));
+            System.out.println(guessNumber.countGuessNumber(inputNumber));
             sc.close();
         }
     }
