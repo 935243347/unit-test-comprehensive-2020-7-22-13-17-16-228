@@ -25,6 +25,7 @@ check.dependsOn jacocoTestReport
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenLocal()
     jcenter()
 }
@@ -35,6 +36,7 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+    testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.6.2'
     // Use JUnit test framework
     testCompile 'org.mockito:mockito-core:3.4.0'
 }

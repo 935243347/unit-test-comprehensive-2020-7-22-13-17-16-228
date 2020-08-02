@@ -9,22 +9,21 @@ public class GuessNumber {
 
     //todo function rename
     public String guess(int[] inputGuess) {
-        //todo rename countANum to xxxxx
-        int countANum = 0;
-        int countBNum = 0;
+        int correctPositionAndNumberCount = 0;
+        int correctNumberWrongPosition = 0;
         for (int index = 0; index < answer.length; index++) {
             if (answer[index] == inputGuess[index]) {
-                countANum++;
+                correctPositionAndNumberCount++;
                 continue;
             }
             for (int guessNum : inputGuess) {
                 if (answer[index] == guessNum) {
-                    countBNum++;
+                    correctNumberWrongPosition++;
                     break;
                 }
             }
         }
         //todo function
-        return String.format("%sA%sB", countANum, countBNum);
+        return String.format("%sA%sB", correctPositionAndNumberCount, correctNumberWrongPosition);
     }
 }
